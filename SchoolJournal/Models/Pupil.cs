@@ -1,17 +1,18 @@
 ﻿using System;
-namespace SchoolJournal
+namespace SchoolJournal.Models
 {
-    public class EmptyClass
+    public class Pupil : Person
     {
-        string _firstName;
-        string _lastName;
-        DateTime _dateOfBirth;
-    }
+        public Pupil(string firstName, string lastName, DateTime dateOfBirth)
+            : base(firstName, lastName)
+        {
+            BirthDate = dateOfBirth;
+        }
 
-    public GetFullName(string firstName, string lastName, dateOfBirth)
-    {
-        _firstName = firstName;
-        _
+        /// <summary>
+        /// Gets pupil's date of birth.
+        /// </summary>
+        public DateTime BirthDate { get; }
     }
 
 }

@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{F973CD3F-8D29-4C5B-8788-A88D22D41D2A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SchoolJournal/Pages/Journal.cshtml">
+    <Files>
+      <File FileName="SchoolJournal/Pages/Index.cshtml" Line="28" Column="33" />
+      <File FileName="SchoolJournal/Pages/Journal.cshtml" Line="10" Column="29" />
+      <File FileName="SchoolJournal/Pages/_Layout.cshtml" Line="6" Column="34" />
+      <File FileName="SchoolJournal/Pages/_ViewStart.cshtml" Line="2" Column="24" />
+      <File FileName="SchoolJournal/bundleconfig.json" Line="1" Column="1" />
+      <File FileName="SchoolJournal/Startup.cs" Line="30" Column="13" />
+      <File FileName="SchoolJournal/Program.cs" Line="16" Column="44" />
+      <File FileName="SchoolJournal/Models/Journal.cs" Line="39" Column="29" />
+      <File FileName="SchoolJournal/Models/JournalPage.cs" Line="10" Column="20" />
+      <File FileName="SchoolJournal/Models/Pupil.cs" Line="15" Column="1" />
+      <File FileName="SchoolJournal/Models/Teacher.cs" Line="5" Column="9" />
+      <File FileName="SchoolJournal/Models/Person.cs" Line="11" Column="41" />
+      <File FileName="SchoolJournal/wwwroot/css/site.css" Line="9" Column="27" />
+      <File FileName="SchoolJournal/bower.json" Line="5" Column="24" />
+      <File FileName="SchoolJournal/wwwroot/js/site.js" Line="2" Column="1" />
+      <File FileName="SchoolJournal/package.json" Line="1" Column="1" />
+      <File FileName="SchoolJournal/Pages/Journal.cshtml.cs" Line="10" Column="21" />
+      <File FileName="SchoolJournal/Pages/Index.cshtml.cs" Line="34" Column="49" />
+      <File FileName="SchoolJournal/Models/Class.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SchoolJournal PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -5,21 +5,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SchoolJournal.Pages
 {
-    public class ClassModel : PageModel
+    public class JournalModel : PageModel
     {
-        public Class Class { get; set; }
+        public Journal Journal { get; set; }
+
+        public string Title => Journal.ClassName + " " + Journal.AcademicYear;
 
         public IActionResult OnGet()
         {
-            Class c = new Class("8-A");
+            Journal journal = new Journal("8-A", 2017, 2018);
 
-            c.AddPupil(new Pupil("Alexei", "Nilga", new DateTime(2003, 12, 9)));
-            c.AddPupil(new Pupil("Michael", "Nilga", new DateTime(2004, 5, 14)));
-            c.AddPupil(new Pupil("Maxim", "Ptashnik", new DateTime(2004, 9, 20)));
-            c.AddPupil(new Pupil("Oleg", "Kyzmin", new DateTime(2003, 9, 28)));
-            c.AddPupil(new Pupil("Daniil", "Dobronos", new DateTime(2004, 6, 15)));
+            journal.AddPupil(new Pupil("Никита", "Васильченко", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil("Алексей", "Нильга", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil("Максим", "Пташник", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil("Михаил", "Нильга", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil("Олег", "Кузьмин", new DateTime(2003, 1, 8)));
 
-            Class = c;
+
+
+            Journal = journal;
 
             return Page();
         }

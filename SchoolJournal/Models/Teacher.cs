@@ -1,9 +1,9 @@
-﻿using System;
-namespace SchoolJournal.Models
+﻿namespace SchoolJournal.Models
 {
-    public class Teacher
+    public class Teacher : Person
     {
-        public Teacher()
+        public Teacher(string firstName, string lastName)
+            : base(firstName, lastName)
         {
         }
     }
