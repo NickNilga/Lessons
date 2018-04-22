@@ -1,0 +1,19 @@
+﻿@page
+@using SchoolJournal.Pages
+
+@model ClassModel
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Class - @Model.Class.Name</title>
+    </head>
+    <body>
+        @foreach(var pupil in Model.Class.ListPupils)
+        {
+            <div>@pupil.GetFullName()</div>
+        }
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "vsgulptest",
+  "version": "1.0.0",
+  "description": "testing gulp",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NN",
+  "license": "ISC"
+}
