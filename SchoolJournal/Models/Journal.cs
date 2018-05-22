@@ -5,16 +5,22 @@ namespace SchoolJournal.Models
 {
     public class Journal
     {
+
+
         private readonly List<Pupil> _pupils;
 
-        public Journal(string className, int startYear, int endYear)
+        public Journal(int id, string className, int startYear, int endYear)
         {
+            Id = id;
             ClassName = className;
             StartYear = startYear;
             EndYear = endYear;
 
             _pupils = new List<Pupil>();
         }
+
+        public int Id { get; }
+
 
         /// <summary>
         /// Gets the name of the class.
