@@ -29,5 +29,6 @@ namespace SchoolJournal.Pages
 
             return Page();
         }
+
     }
 }

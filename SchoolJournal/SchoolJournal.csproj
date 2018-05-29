@@ -17,9 +17,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Pages\EmptyCSSFile.css" />
@@ -29,7 +26,10 @@
     <Compile Remove="Models\Class.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Pages\Class.cshtml.cs">
+  <Compile Update="Pages\AddJournal.cshtml.cs">
+      <DependentUpon>AddJournal.cshtml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Journal.cshtml.cs">
       <DependentUpon>Journal.cshtml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Index.cshtml.cs">
