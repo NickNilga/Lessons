@@ -7,7 +7,14 @@
     ViewData["Title"] = Model.Title;
 }
 
-<div class="container py-4">
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">@Model.Title</h1>
+        <p class="lead text-muted">@Model.Description</p>
+    </div>
+</section>
+
+<div class="container">
 
     <!-- Save and Cancel buttons -->
     <div class="row py-4">
@@ -15,7 +22,7 @@
             @*<a asp-page="Index" class="btn btn-success">
                 Save
             </a>*@
-            <a asp-page="Index" class="btn btn-secondary">
+            <a asp-page="Index" class="btn btn-primary">
                 Cancel
             </a>
         </div>

@@ -1,20 +1,5 @@
 ﻿<Properties StartupConfiguration="{F973CD3F-8D29-4C5B-8788-A88D22D41D2A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lessons Status">
-    <Files>
-      <File FileName="SchoolJournal/Pages/AddPupil.cshtml" Line="17" Column="7" />
-      <File FileName="SchoolJournal/Pages/AddJournal.cshtml" Line="18" Column="1" />
-      <File FileName="SchoolJournal/Pages/Index.cshtml" Line="18" Column="5" />
-      <File FileName="SchoolJournal/Tasks.txt" Line="20" Column="1" />
-      <File FileName="SchoolJournal/Models/JournalPage.cs" Line="1" Column="1" />
-      <File FileName="SchoolJournal/Models/Person.cs" Line="1" Column="1" />
-      <File FileName="SchoolJournal/Models/Teacher.cs" Line="1" Column="1" />
-      <File FileName="SchoolJournal/Pages/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="SchoolJournal/Pages/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="SchoolJournal/Pages/Index.cshtml.cs" Line="32" Column="9" />
-      <File FileName="SchoolJournal/Pages/AddJournal.cshtml.cs" Line="26" Column="1" />
-      <File FileName="Lessons Status" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

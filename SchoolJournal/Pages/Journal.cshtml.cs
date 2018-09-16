@@ -15,9 +15,10 @@ namespace SchoolJournal.Pages
             _repository = new InMemoryRepository();
         }
 
-        public Journal Journal { get; set; }
+        public Journal Journal { get; private set; }
 
         public string Title => Journal.ClassName + " " + Journal.AcademicYear;
+        
 
         public IActionResult OnGet(int joirnalid)
         {

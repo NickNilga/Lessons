@@ -14,7 +14,9 @@ namespace SchoolJournal.Pages
             _repository = new InMemoryRepository();
         }
 
-        public string Title => "Add Journal";
+        public string Title => "Add New Journal";
+
+        public string Description => "Please specify journal details and click Save.";
 
 
         public IActionResult OnGet()
