@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SchoolJournal.Models
 {
     public class Journal
     {
-
-
+        
         private readonly List<Pupil> _pupils;
 
         public Journal(int id, string className, int startYear, int endYear)
@@ -47,6 +45,10 @@ namespace SchoolJournal.Models
             get { return _pupils; }
         }
 
+        /// <summary>
+        /// Adds a pupil to the journal.
+        /// </summary>
+        /// <param name="pupil"></param>
         public void AddPupil(Pupil pupil)
         {
             _pupils.Add(pupil);

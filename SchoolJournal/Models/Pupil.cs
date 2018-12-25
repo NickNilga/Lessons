@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace SchoolJournal.Models
 {
     public class Pupil : Person
@@ -13,6 +14,6 @@ namespace SchoolJournal.Models
         /// Gets pupil's date of birth.
         /// </summary>
         public DateTime BirthDate { get; }
-    }
+    }   
 
 }

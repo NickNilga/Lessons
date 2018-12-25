@@ -7,6 +7,11 @@
 packages/
 TestResults/
 
+# IDE
+.idea/
+.vscode/
+.vs/
+
 # globs
 Makefile.in
 *.DS_Store
@@ -27,6 +32,7 @@ autom4te.cache/
 tarballs/
 test-results/
 Thumbs.db
+package-lock.json
 
 # Mac bundle stuff
 *.dmg

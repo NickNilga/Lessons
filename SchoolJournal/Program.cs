@@ -13,10 +13,17 @@ namespace SchoolJournal
         {
             IWebHost host = WebHost
                 .CreateDefaultBuilder(args)
+                .ConfigureLogging((hostingContext, logging) =>
+                {
+                    logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    logging.AddConsole();
+                    logging.AddDebug();
+                    logging.AddEventSourceLogger();
+                })
                 .UseStartup<Startup>()
                 .Build();
 
-            //Initialie database
+            //Initialize database
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
