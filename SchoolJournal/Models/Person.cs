@@ -1,17 +1,31 @@
 ﻿namespace SchoolJournal.Models
 {
-    public class Person
+    /// <summary>
+    /// Represents abstract person.
+    /// </summary>
+    public abstract class Person
     {
-        public Person(string firstName, string lastName)
+        
+        protected Person(int id, string firstName, string lastName)
         {
+            Id = id;
             FirstName = firstName;
             LastName = lastName;
         }
 
+        /// <summary>
+        /// Gets person unique ID.
+        /// </summary>
+        public int Id { get; }
+        
+        /// <summary>
+        /// Gets person first (family) name.
+        /// </summary>
         public string FirstName { get; }
 
+        /// <summary>
+        /// Gets person last (given) name.
+        /// </summary>
         public string LastName { get; }
-
-        public string FullName =>  FirstName + " " + LastName;
     }
 }

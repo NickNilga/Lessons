@@ -7,12 +7,11 @@ namespace SchoolJournal.Models
         
         private readonly List<Pupil> _pupils;
 
-        public Journal(int id, string className, int startYear, int endYear)
+        public Journal(int id, string className, AcademicYear year)
         {
             Id = id;
             ClassName = className;
-            StartYear = startYear;
-            EndYear = endYear;
+            Year = year;
 
             _pupils = new List<Pupil>();
         }
@@ -25,17 +24,10 @@ namespace SchoolJournal.Models
         /// </summary>
         public string ClassName { get; }
 
-        public int StartYear { get; }
-
-        public int EndYear { get; }
-
         /// <summary>
-        /// Gets year, i.e. "2000/2001"
+        /// Gets academic year for the journal.
         /// </summary>
-        public string AcademicYear
-        {
-            get { return StartYear + "/" + EndYear; }
-        }
+        public AcademicYear Year { get; }
 
         /// <summary>
         /// Gets class pupils.

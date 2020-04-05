@@ -1,0 +1,38 @@
+@startuml
+
+abstract Person{
+    + string FirstName
+    + string LastName
+    + string FullName
+}
+
+class Pupil{
+    + DateTime BirthDate
+}
+
+class Journal{
+    + int Id
+    + string ClassName
+    +
+}
+
+class JournalPage{
+    + string Subject
+}
+
+enum TimeUnit {
+    DAYS
+    HOURS
+    MINUTES
+}
+
+Person <|-- Pupil 
+Person <|-- Teacher 
+
+Class *-- Pupil
+Journal "1" *-- "many" JournalPage : contains
+
+Journal "1" *-- "many" Pupil : contains
+
+
+@enduml

@@ -15,7 +15,7 @@
     </div>
 </section>
 
-<div class="container">
+<div class="container py-4">
 
     <div class="card-deck">
         @foreach (Journal journal in Model.Journals)
@@ -23,10 +23,11 @@
             <div class="card bg-secondary text-white">
                 <div class="card-header">@journal.ClassName</div>
                 <div class="card-body">
-                    <p class="card-text">@journal.AcademicYear</p>
+                    <p class="card-text">@journal.Year.ToString()</p>
                 </div>
+                
                 <div class="card-footer text-right">
-                    <a asp-page="Journal" asp-route-joirnalid="@journal.Id" class="btn btn-info btn-sm btn-block">Open...</a>
+                    <a asp-page="Journal" asp-route-id="@journal.Id" class="btn btn-info btn-sm btn-block">Open...</a>
                 </div>
             </div>
         }

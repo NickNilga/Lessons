@@ -14,13 +14,15 @@
     </div>
 </section>
 
-<div class="container">
-    <table class="table table-bordered table-hover table-sm">
+<div class="container py-4">
+    <table class="table table-hover table-sm">
         <caption>List of pupils</caption>
         <thead class="thead-dark">
         <tr>
-            <th>#</th>
-            <th>Pupil</th>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -28,8 +30,18 @@
         {
             var pupil = Model.Journal.Pupils[i];
             <tr>
-                <th scope="row">@(i + 1)</th>
-                <td>@pupil.FullName</td>
+                <th scope="row" >@(i + 1)</th>
+                <td>
+                    @pupil.FirstName
+                </td>
+                <td>
+                    @pupil.LastName
+                </td>
+                <td>
+                    <a asp-page="PupilDetails" asp-route-id="@pupil.Id" class="btn btn-sm btn-link" role="button">
+                        Info...
+                    </a>
+                </td>
             </tr>
         }
         </tbody>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Lessons.-1426313011.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Lessons.-1426313011.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Lessons.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
@@ -13,23 +13,23 @@
         <e p="bower.json" t="Include" />
         <e p="bundleconfig.json" t="Include" />
         <e p="Models" t="Include">
+          <e p="AcademicYear.cs" t="Include" />
+          <e p="Class.cs" t="Include" />
           <e p="Journal.cs" t="Include" />
           <e p="JournalPage.cs" t="Include" />
           <e p="Person.cs" t="Include" />
           <e p="Pupil.cs" t="Include" />
           <e p="Teacher.cs" t="Include" />
         </e>
-        <e p="node_modules" t="ExcludeRecursive">
-          <e p="gulp-sass" t="IncludeRecursive" />
-        </e>
+        <e p="node_modules/gulp-sass" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
               <e p="SchoolJournal.AssemblyInfo.cs" t="Include" />
+              <e p="SchoolJournal.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="package-lock.json" t="Include" />
         <e p="package.json" t="Include" />
         <e p="Pages" t="Include">
           <e p="_Layout.cshtml" t="Include" />
@@ -42,6 +42,8 @@
           <e p="Index.cshtml.cs" t="Include" />
           <e p="Journal.cshtml" t="Include" />
           <e p="Journal.cshtml.cs" t="Include" />
+          <e p="PupilDetails.cshtml" t="Include" />
+          <e p="PupilDetails.cshtml.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

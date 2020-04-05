@@ -14,7 +14,7 @@ namespace SchoolJournal.Repositories
         /// <summary>
         /// The journals.
         /// </summary>
-        private List<Journal> _journals;
+        private readonly List<Journal> _journals;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InMemoryRepository"/> 
@@ -24,27 +24,27 @@ namespace SchoolJournal.Repositories
         {
             _journals = new List<Journal>();
 
-            // Создаем журнал для 8-А.
-            Journal journal = new Journal(1, "8-А", 2017, 2018);
+            // Create journal for 8-А.
+            Journal journal = new Journal(1, "8-А", new AcademicYear(2018));
 
-            journal.AddPupil(new Pupil("Никита", "Васильченко", new DateTime(2003, 1, 8)));
-            journal.AddPupil(new Pupil("Алексей", "Нильга", new DateTime(2003, 1, 8)));
-            journal.AddPupil(new Pupil("Максим", "Пташник", new DateTime(2003, 1, 8)));
-            journal.AddPupil(new Pupil("Михаил", "Нильга", new DateTime(2003, 1, 8)));
-            journal.AddPupil(new Pupil("Олег", "Кузьмин", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil(1, "Никита", "Васильченко", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil(2, "Алексей", "Нильга", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil(3, "Максим", "Пташник", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil(4, "Михаил", "Нильга", new DateTime(2003, 1, 8)));
+            journal.AddPupil(new Pupil(5, "Олег", "Кузьмин", new DateTime(2003, 1, 8)));
 
-            // Добавляем журнал 8-А в список журналов школы.
+            // Add journal to the list of school journals.
             _journals.Add(journal);
 
 
-            journal = new Journal(2, "8-Б", 2017, 2018);
-            journal.AddPupil(new Pupil("Вася", "Тазиков", new DateTime(2003, 1, 8)));
+            journal = new Journal(2, "8-Б", new AcademicYear(2018));
+            journal.AddPupil(new Pupil(6, "Вася", "Тазиков", new DateTime(2003, 1, 8)));
             _journals.Add(journal);
 
-            // Добавляем в список журналов несколько пустых журналов.
-            _journals.Add(new Journal(3, "8-В", 2017, 2018));
-            _journals.Add(new Journal(4, "8-Г", 2017, 2018));
-            _journals.Add(new Journal(5, "8-Д", 2017, 2018));
+            // Add a few empty journals.
+            _journals.Add(new Journal(3, "8-В",  new AcademicYear(2018)));
+            _journals.Add(new Journal(4, "8-Г", new AcademicYear(2018)));
+            _journals.Add(new Journal(5, "8-Д", new AcademicYear(2017)));
 
         }
 
