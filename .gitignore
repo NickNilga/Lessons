@@ -8,9 +8,9 @@ packages/
 TestResults/
 
 # IDE
-.idea/
-.vscode/
-.vs/
+**/.idea
+**/.vscode
+**/.vs
 
 # globs
 Makefile.in
