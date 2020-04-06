@@ -3,49 +3,54 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-
+using Microsoft.Extensions.Hosting;
 using SchoolJournal.Repositories.Database;
 
 namespace SchoolJournal
 {
-    public class Startup
-    {
-        private readonly IConfiguration _configuration;
-        
-        public Startup(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+	public class Startup
+	{
+		private readonly IConfiguration _configuration;
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
+		public Startup(IConfiguration configuration)
+		{
+			_configuration = configuration;
+		}
 
-            services.AddDbContext<SchoolDbContext>(options =>
-                options.UseSqlite(_configuration.GetConnectionString("SchoolDatabase")));
-            
-            // Configure dependencies.
-            // services.AddScoped<>();
-        }
+		// This method gets called by the runtime. Use this method to add services to the container.
+		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+		public void ConfigureServices(IServiceCollection services)
+		{
+			services.AddRazorPages();
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+			services.AddDbContext<SchoolDbContext>(options =>
+				options.UseSqlite(_configuration.GetConnectionString("SchoolDatabase")));
 
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
-            app.UseMvc();
-        }
-    }
+			// Configure dependencies.
+			// services.AddScoped<>();
+		}
+
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+			}
+			else
+			{
+				app.UseExceptionHandler("/Home/Error");
+				app.UseHsts();
+			}
+
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
+
+			app.UseRouting();
+
+			app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
+			
+			app.UseCookiePolicy();
+		}
+	}
 }
