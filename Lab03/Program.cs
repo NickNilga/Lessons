@@ -7,8 +7,6 @@ namespace Lab03
 	{
 		private static void Main()
 		{
-			int[] arrayA = new[] {1, 2, 3, 4, 5, 6};
-
 			int[] arrayB = new int[10];
 
 			arrayB[0] = 45;
@@ -21,6 +19,11 @@ namespace Lab03
 			arrayB[7] = -5;
 			arrayB[8] = 465;
 			arrayB[9] = 32;
+			
+			int[] arrayA = new[] {1, 2, 3, 4, 5, 6};
+
+			int[] arrayC = {1, 2, 3, 4, 5, 6};
+
 
 			for (int i = 0; i < arrayA.Length; i++)
 			{
