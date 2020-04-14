@@ -7,32 +7,22 @@ namespace Lab03
 	{
 		private static void Main()
 		{
-			int[] arrayB = new int[10];
+			int[] a = new int[10];
 
-			arrayB[0] = 45;
-			arrayB[1] = 53;
-			arrayB[2] = 25;
-			arrayB[3] = 41;
-			arrayB[4] = -8;
-			arrayB[5] = 87;
-			arrayB[6] = 4;
-			arrayB[7] = -5;
-			arrayB[8] = 465;
-			arrayB[9] = 32;
-			
-			int[] arrayA = new[] {1, 2, 3, 4, 5, 6};
+			a[0] =  1;
+			a[1] =  2;
+			a[2] =  12;
+			a[3] =  18;
+			a[4] =  20;
+			a[5] =  25;
+			a[6] =  0;
+			a[7] =  -11;
+			a[8] =  97;
+			a[9] =  107;
 
-			int[] arrayC = {1, 2, 3, 4, 5, 6};
-
-
-			for (int i = 0; i < arrayA.Length; i++)
+			for (int i = 0; i < a.Length; i ++)
 			{
-				Console.Out.WriteLine("array [{0}] = {1}", i, arrayA[i]);
-			}
-
-			foreach (int b in arrayB)
-			{
-				Console.Out.WriteLine("b = {0}", b);
+				Console.Out.WriteLine("x[{0}] = {1} ", i, a[i] );
 			}
 		}
 	}
