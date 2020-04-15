@@ -7,23 +7,37 @@ namespace Lab03
 	{
 		private static void Main()
 		{
-			int[] a = new int[10];
-
-			a[0] =  1;
-			a[1] =  2;
-			a[2] =  12;
-			a[3] =  18;
-			a[4] =  20;
-			a[5] =  25;
-			a[6] =  0;
-			a[7] =  -11;
-			a[8] =  97;
-			a[9] =  107;
-
-			for (int i = 0; i < a.Length; i ++)
+			int numberOfElements;
+			
+			
+			Console.Out.Write("Enter the number or elements:");
+			string strNumber = Console.In.ReadLine();
+			int.TryParse(strNumber, out numberOfElements);
+			
+			int[] a = new int[numberOfElements];
+			
+			for (int i = 0; i < a.Length; i++)
 			{
-				Console.Out.WriteLine("x[{0}] = {1} ", i, a[i] );
+				Console.Out.Write("Enter {0} value: ", i + 1);
+				string str = Console.In.ReadLine();
+				a[i] = int.Parse(str);
 			}
+			
+			// for (int i = 0; i < a.Length; i ++)
+			// {
+			// 	Console.Out.WriteLine("x[{0}] = {1} ", i+1, a[i]);
+			// }
+
+			int max = a[0];
+			for (int i = 1; i < a.Length; i ++)
+			{
+				if (a[i] > max)
+				{
+					max = a[i];
+				}
+			}
+			Console.Out.WriteLine(max);
+			
 		}
 	}
 }
