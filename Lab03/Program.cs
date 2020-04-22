@@ -7,8 +7,17 @@ namespace Lab03
 	{
 		private static void Main()
 		{
-			int numberOfElements;
+			AnotherFunction(1.0f);
+			int[] a = LoadArray();
+			int[] result = FindMax(a);
+			double avg = FindAvg(a);
+			Console.Out.WriteLine("Max = {0}; max index = {1}; Avg = {2}", result[0],result[1], avg);
 			
+		}
+
+		private static int[] LoadArray()
+		{
+			int numberOfElements;
 			
 			Console.Out.Write("Enter the number or elements:");
 			string strNumber = Console.In.ReadLine();
@@ -22,22 +31,67 @@ namespace Lab03
 				string str = Console.In.ReadLine();
 				a[i] = int.Parse(str);
 			}
-			
-			// for (int i = 0; i < a.Length; i ++)
-			// {
-			// 	Console.Out.WriteLine("x[{0}] = {1} ", i+1, a[i]);
-			// }
 
-			int max = a[0];
-			for (int i = 1; i < a.Length; i ++)
+			Console.Out.Write("Array: [");
+			for (int i = 0; i < a.Length; i++)
 			{
-				if (a[i] > max)
+				if(i < a.Length - 1)
 				{
-					max = a[i];
+					Console.Out.Write("{0}, ", a[i]);	
+				}
+				else
+				{
+					Console.Out.Write("{0}", a[i]);	
+				}
+				
+			}
+			Console.Out.WriteLine("]");
+
+			Console.Out.WriteLine($"Array: [{string.Join(", ", a)}]");
+			
+			return a;
+		}
+		
+
+		private static int[] FindMax(int[] array)
+		{
+			int max = array[0];
+			int maxindex = 0;
+			for (int i = 1; i < array.Length; i ++)
+			{
+				if (array[i] > max)
+				{
+					max = array[i];
+					maxindex = i;
 				}
 			}
-			Console.Out.WriteLine(max);
-			
+
+			int[] result = {max, maxindex};
+
+			return result;
 		}
+
+		private static double FindAvg(int[] array)
+		{
+			double sum = 0;
+			for (int i = 0; i < array.Length; i++)
+			{
+				sum += array[i];
+				
+			}
+			
+			return sum / array.Length;
+
+		}
+		private static void AnotherFunction(int x)
+		{
+		}
+
+		private static void AnotherFunction(float x)
+		{
+		}
+		
+		
+
 	}
 }
