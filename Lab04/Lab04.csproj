@@ -6,4 +6,8 @@
         <RootNamespace>Fibonachi</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Files" />
+    </ItemGroup>
+
 </Project>
