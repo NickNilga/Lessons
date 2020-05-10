@@ -54,5 +54,20 @@ namespace Lab04
             _radio = null;
         }
 
+        public void StartEngine()
+        {
+            _engine.Start();
+        }
+
+        public void StopEngine()
+        {
+            _engine.Stop();
+        }
+        
+        public bool IsStarted()
+        {
+            return _engine.IsStarted();
+        }
+
     }
 }
