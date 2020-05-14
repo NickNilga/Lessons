@@ -1,14 +1,8 @@
-using System;
-using NOD;
-
-namespace Lab04
+namespace Lab04.Garage
 {
-	public class Car
+	public class Car:Vehicle
 	{
-		private string _model;
-		private string _make;
-		private Engine _engine;
-		private Wheel[] _wheels;
+		private readonly Wheel[] _wheels;
 		private Radio _radio;
 
 		public Car(
@@ -18,11 +12,9 @@ namespace Lab04
 			string wheelModel,
 			int wheelRadius,
 			int wheelWidth)
+			:base(make, model, engine)
+			
 		{
-			_model = model;
-			_make = make;
-			_engine = engine;
-
 			_wheels = new Wheel[4];
 
 			for (int i = 0; i < 4; i++)
@@ -51,21 +43,6 @@ namespace Lab04
 		public void RemoveRadio()
 		{
 			_radio = null;
-		}
-
-		public void StartEngine()
-		{
-			_engine.Start();
-		}
-
-		public void StopEngine()
-		{
-			_engine.Stop();
-		}
-
-		public bool IsStarted()
-		{
-			return _engine.IsStarted();
 		}
 	}
 }

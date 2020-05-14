@@ -1,18 +1,20 @@
-﻿
-
-using System;
-using System.ComponentModel.Design;
-using System.Runtime.InteropServices;
-using NOD;
+﻿using System;
+using Lab04.Garage;
 
 namespace Lab04
 {
-    class Program
+    static class Program
     {
         static void Main()
         {
              Engine hybridEngine = new Engine("BMW", "Hybrid");
-             Car bmwCar = new Car("X5", "BMW", hybridEngine, "Nokian",15, 185);
+             Vehicle bmwCar = new Car("X5", "BMW", hybridEngine, "Nokian",15, 185);
+             
+             Wheel frontWheel = new Wheel("GoodYear", 20, 100);
+             Wheel backWheel = new Wheel("GoodYear", 20, 120);
+             Engine motoEngine = new Engine("Honda", "Sport");
+             Vehicle motorcycle = new Motorcycle("Honda", "Racer", frontWheel, backWheel, motoEngine);
+            
      
             bool exit = false;
 
@@ -21,7 +23,8 @@ namespace Lab04
                 Console.Clear();
                 Console.Out.WriteLine(bmwCar);
                 Console.Out.WriteLine();
-                
+                Console.Out.WriteLine(motorcycle);
+
                 char key = PrintMenu();
                 
                 switch (key)
@@ -35,15 +38,15 @@ namespace Lab04
                     case '1':
                         bmwCar.StartEngine();
                         break;
-                    case '2':
-                    {
-                        Radio pioneerRadio = new Radio("Pioneer", true); 
-                        bmwCar.SetRadio(pioneerRadio);
-                        break;
-                    }
-                    case '3':
-                        bmwCar.RemoveRadio();
-                        break;
+                    // case '2':
+                    // {
+                    //     Radio pioneerRadio = new Radio("Pioneer", true); 
+                    //     bmwCar.SetRadio(pioneerRadio);
+                    //     break;
+                    // }
+                    // case '3':
+                    //     bmwCar.RemoveRadio();
+                    //     break;
                 }
                 
             } while (!exit);

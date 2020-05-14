@@ -1,13 +1,11 @@
-using System;
-
-namespace Lab04
+namespace Lab04.Garage
 {
     public class Engine
     {
-        private string _model;
-        private string _type;
+        private readonly string _model;
+        private readonly string _type;
         private bool _isStarted;
-        
+
         public Engine(string model, string type)
         {
             _model = model;

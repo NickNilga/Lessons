@@ -1,11 +1,9 @@
-using System;
-
-namespace NOD
+namespace Lab04.Garage
 {
     public class Radio
     {
-        private string _make;
-        private bool _hasUSB;
+        private readonly string _make;
+        private readonly bool _hasUSB;
 
         public Radio(string make, bool hasUsb)
         {

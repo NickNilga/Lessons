@@ -1,12 +1,10 @@
-using System;
-
-namespace Lab04
+namespace Lab04.Garage
 {
 	public class Wheel
 	{
-		private string _model;
-		private int _radius;
-		private int _width;
+		private readonly string _model;
+		private readonly int _radius;
+		private readonly int _width;
 
 
 		public Wheel(string model, int radius, int width)
