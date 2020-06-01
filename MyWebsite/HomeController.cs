@@ -7,7 +7,7 @@ namespace MyWebsite
 		// GET
 		public IActionResult Index()
 		{
-			return View();
+			return Content("Hello world!");
 		}
 	}
 }

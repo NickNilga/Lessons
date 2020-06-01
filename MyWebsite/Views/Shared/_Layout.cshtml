@@ -1,78 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - WebApplication1</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/wwwroot/css/bootstrap.css"/>
+        <link rel="stylesheet" href="~/css/bootstrap.css"/>
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" 
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
     </environment>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a asp-page="/Index" class="navbar-brand">WebApplication1</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a asp-page="/Index">Home</a>
-                </li>
-                <li>
-                    <a asp-page="/About">About</a>
-                </li>
-                <li>
-                    <a asp-page="/Contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Alex Nilga</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">New Item</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">New Item2</a>
+            </li>
+        </ul>
     </div>
 </nav>
 
-<partial name="_CookieConsentPartial"/>
+<main role="main" class="container">
 
-<div class="container body-content">
     @RenderBody()
-    <hr/>
-    <footer>
-        <p>&copy; 2018 - WebApplication1</p>
-    </footer>
-</div>
+
+</main>
 
 <environment include="Development">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/wwwroot/js/bootstrap.js"></script>
+    <script src="~/js/jquery-3.5.1.js"></script>
+    <script src="~/js/bootstrap.js"></script>
 </environment>
 <environment exclude="Development">
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-            asp-fallback-test="window.jQuery"
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.0.min.js"
             crossorigin="anonymous"
             integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
         </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
             crossorigin="anonymous"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
 </environment>
 
-@RenderSection("Scripts", required: false)
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -16,11 +16,11 @@ namespace MyWebsite
 				.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
-					webBuilder.ConfigureKestrel(serverOptions =>
-						{
-							
-						})
-						.UseStartup<Startup>();
+					// webBuilder.ConfigureKestrel(serverOptions =>
+					// 	{
+					// 		
+					// 	})
+						webBuilder.UseStartup<Startup>();
 				});
 		}
 	}
