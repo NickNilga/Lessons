@@ -7,8 +7,8 @@ namespace MyWebsite.Controllers
 		// GET
 		public IActionResult Index()
 		{
-			//return Content("Hello world!");
-			return View();
+			return Content("Hello world!");
+			//return View();
 		}
 	}
 }
