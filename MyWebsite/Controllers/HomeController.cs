@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MyWebsite
+namespace MyWebsite.Controllers
 {
 	public class HomeController : Controller
 	{
@@ -8,6 +8,7 @@ namespace MyWebsite
 		public IActionResult Index()
 		{
 			return Content("Hello world!");
+			//return View();
 		}
 	}
 }
