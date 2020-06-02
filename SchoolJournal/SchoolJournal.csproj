@@ -14,10 +14,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="*" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Pages\EmptyCSSFile.css" />
-    <None Remove="EmptyCSSFile.css" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="Pages\AddJournal.cshtml.cs">
       <DependentUpon>AddJournal.cshtml</DependentUpon>
     </Compile>
