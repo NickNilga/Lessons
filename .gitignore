@@ -34,6 +34,8 @@ test-results/
 Thumbs.db
 package-lock.json
 
+# Node modules
+node_modules/
 # Mac bundle stuff
 *.dmg
 *.app
