@@ -1,14 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
+using MyWebsite.Models;
 
 namespace MyWebsite.Controllers
 {
 	public class HomeController : Controller
 	{
 		// GET
-		public IActionResult Index()
+		public IActionResult Index(string name)
 		{
-			return Content("Hello world!");
-			//return View();
+			GreetingsModel model = new GreetingsModel(name);
+			
+			return View(model);
 		}
 	}
 }

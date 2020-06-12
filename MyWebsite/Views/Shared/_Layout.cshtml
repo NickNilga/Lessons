@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - WebApplication1</title>
+    <title>@ViewData["Title"]</title>
     <script type="module" src="~/dist/site.entry.js" defer></script>
 </head>
 
 <body class="bg-light">
 
 @RenderBody()
-
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>
