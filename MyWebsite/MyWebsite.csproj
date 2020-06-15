@@ -27,6 +27,14 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Update="Pages\Math\Index.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Math\Factorial.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
@@ -40,7 +48,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Pages" />
       <Folder Include="wwwroot" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Factorial\Factorial.csproj" />
     </ItemGroup>
 
 </Project>
